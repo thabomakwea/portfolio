@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thabo Makwea | Portfolio Coming Soon</title>
+  <style>
+    /* Reset some default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Main body styling */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #4f4bff, #6fa3ef);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* Main container */
+    .container {
+      padding: 40px;
+      max-width: 530px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main heading style */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    /* Subtitle styling */
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    /* Countdown container */
+    .countdown {
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.1rem;
+    }
+
+    /* Individual countdown boxes */
+    .countdown div {
+      padding: 15px 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      width: 105px;
+      font-weight: bold;
+    }
+
+    /* Footer with link */
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Button styling */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #4f4bff;
+      background-color: #ffffff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #d9d9ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Thabo Makwea</h1>
+    <p>My portfolio is under construction. Something amazing is coming soon!</p>
+    
+    <!-- Countdown placeholder -->
+    <div class="countdown">
+      <div>
+        <span id="days">00</span><br>Days
+      </div>
+      <div>
+        <span id="hours">00</span><br>Hours
+      </div>
+      <div>
+        <span id="minutes">00</span><br>Minutes
+      </div>
+      <div>
+        <span id="seconds">00</span><br>Seconds
+      </div>
+    </div>
+    
+    <a href="#" class="button">Notify Me</a>
+
+    <div class="footer">
+      <p>Connect with me on <a href="https://github.com/thabomakwea">GitHub</a></p>
+    </div>
+  </div>
+
+  <!-- JavaScript for countdown -->
+  <script>
+    // Set launch date (example: 30 days from now)
+    const launchDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeLeft = launchDate - now;
+
+      // Time calculations for days, hours, minutes, and seconds
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      // Update countdown display
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    }
+
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
