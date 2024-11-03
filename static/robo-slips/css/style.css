@@ -1,0 +1,11 @@
+section .robot {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+}
+.navbar .navbar-brand i {
+    margin-right: 10px;
+}blockquote {
+    line-height: 50px;
+}

@@ -3,153 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thabo Makwea | Portfolio Coming Soon</title>
+  <title>Thabo Makwea | Portfolio</title>
   <style>
-    /* Reset some default browser styles */
-    * {
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
-    /* Main body styling */
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #4f4bff, #6fa3ef);
-      color: #ffffff;
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
 
-    /* Main container */
+    h1, h2 {
+      margin: 20px 0;
+    }
+
     .container {
-      padding: 40px;
-      max-width: 530px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
     }
 
-    /* Main heading style */
-    h1 {
-      font-size: 2.5rem;
+    section {
+      margin-bottom: 40px;
+    }
+
+    .project-link {
+      display: block;
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #e9f5ff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #007bff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .project-link:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .intro {
+      font-style: italic;
       margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    /* Subtitle styling */
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #e0e0e0;
-    }
-
-    /* Countdown container */
-    .countdown {
-      display: flex;
-      justify-content: space-around;
-      font-size: 1.1rem;
-    }
-
-    /* Individual countdown boxes */
-    .countdown div {
-      padding: 15px 20px;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      width: 105px;
-      font-weight: bold;
-    }
-
-    /* Footer with link */
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-
-    .footer a {
-      color: #e0e0e0;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer a:hover {
-      color: #ffffff;
-    }
-
-    /* Button styling */
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 30px;
-      font-size: 1rem;
-      color: #4f4bff;
-      background-color: #ffffff;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #d9d9ff;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Thabo Makwea</h1>
-    <p>My portfolio is under construction. Something amazing is coming soon!</p>
-    
-    <!-- Countdown placeholder -->
-    <div class="countdown">
-      <div>
-        <span id="days">00</span><br>Days
-      </div>
-      <div>
-        <span id="hours">00</span><br>Hours
-      </div>
-      <div>
-        <span id="minutes">00</span><br>Minutes
-      </div>
-      <div>
-        <span id="seconds">00</span><br>Seconds
-      </div>
-    </div>
-    
-    <a href="#" class="button">Notify Me</a>
+  <header>
+    <h1>Thabo Makwea's Portfolio</h1>
+    <p>Explore my projects and creative works across various domains.</p>
+  </header>
 
-    <div class="footer">
-      <p>Connect with me on <a href="https://github.com/thabomakwea">GitHub</a></p>
-    </div>
+  <div class="container">
+
+    <!-- AI Projects Section -->
+    <section>
+      <h2>AI Projects</h2>
+      <p class="intro">Dive into my collection of AI-powered tools that leverage state-of-the-art NLP models from Hugging Face. These projects showcase my ability to integrate complex AI functionalities with user-friendly interfaces.</p>
+      <a href="ai-projects/ai-powered-document-chatbot/index.html" class="project-link">AI-Powered Document Chatbot</a>
+      <a href="ai-projects/document-summarization-app/index.html" class="project-link">Document Summarization App</a>
+      <a href="ai-projects/emotion-detection-app/index.html" class="project-link">Emotion Detection App</a>
+      <a href="ai-projects/language-translator-app/index.html" class="project-link">Language Translator App</a>
+      <a href="ai-projects/OCR-text-processing-tool/index.html" class="project-link">OCR and Text Processing Tool</a>
+      <a href="ai-projects/sentiment-analysis-app/index.html" class="project-link">Sentiment Analysis App</a>
+      <a href="ai-projects/text-to-speech-app/index.html" class="project-link">Text-to-Speech App</a>
+    </section>
+
+    <!-- Play Section -->
+    <section>
+      <h2>Play</h2>
+      <p class="intro">Engage with my interactive trivia game that challenges your knowledge while demonstrating my capability in game development and user interaction.</p>
+      <a href="play/trivia-challenge" class="project-link">Trivia Challenge Game</a>
+    </section>
+
+    <!-- Web Scraping Section -->
+    <section>
+      <h2>Web Scraping Tools</h2>
+      <p class="intro">Explore my efficient web scraping tools, showcasing my skills in data extraction and handling complex data sources.</p>
+      <a href="web-scrapping/pinterest" class="project-link">Pinterest Web Scraping Tool</a>
+    </section>
+
+    <!-- Mobile Apps Section -->
+    <section>
+      <h2>Mobile Apps (APK Files)</h2>
+      <p class="intro">Check out my mobile app projects, demonstrating my proficiency in mobile app development and delivering practical solutions.</p>
+      <a href="apps/Bilingo 1.0.0 (com.phonegap.helloworld).apk" class="project-link">Bilingo 1.0.0 (APK)</a>
+      <a href="apps/Bilingo Flashcards 0.0.2 (com.bilingo.flashcards).apk" class="project-link">Bilingo Flashcards 0.0.2 (APK)</a>
+    </section>
+
   </div>
 
-  <!-- JavaScript for countdown -->
-  <script>
-    // Set launch date (example: 30 days from now)
-    const launchDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
-
-    function updateCountdown() {
-      const now = new Date();
-      const timeLeft = launchDate - now;
-
-      // Time calculations for days, hours, minutes, and seconds
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-      // Update countdown display
-      document.getElementById("days").textContent = days.toString().padStart(2, '0');
-      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
-    }
-
-    // Update countdown every second
-    setInterval(updateCountdown, 1000);
-  </script>
 </body>
 </html>
